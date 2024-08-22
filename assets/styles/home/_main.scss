@@ -1,0 +1,226 @@
+.main-home {
+  .container {
+    .main-catalog {
+      @include grid_box(grid, repeat(3, 1fr), 1fr, space-between);
+      padding-top: 92px;
+      margin-bottom: 65px;
+
+      @media (max-width: 1100px) {
+        @include grid_box(grid, 1fr, repeat(3, 1fr), center);
+        row-gap: 40px;
+      }
+      .main-item {
+        @include container_box(350px, 100%, 0, 0);
+        text-decoration: none;
+        @media (max-width: 1100px) {
+          margin: 0 auto;
+        }
+        .main-pictures {
+          @include container_box(350px, 100%, 0, 0 0 24px 0);
+          min-height: 478px;
+          transition: background-color 0.7s;
+          img {
+            width: auto;
+            max-width: 350px;
+            height: 100%;
+            display: block;
+            position: relative;
+            z-index: -1;
+          }
+        }
+        .main-pictures:hover {
+          background-color: rgba(110, 156, 159, 0.64);
+          z-index: 2;
+          background-image: url("../images/icons/arrow-white.svg");
+          background-repeat: no-repeat;
+          background-position: center;
+        }
+        .description {
+          @extend %text_size20;
+          text-align: center;
+          margin-bottom: 7px;
+        }
+        .price_all {
+          text-align: center;
+          .price_none {
+            padding-right: 10px;
+            @extend %text_size15;
+            color: $invisibleColor;
+            text-decoration: line-through;
+            font-weight: 500;
+          }
+          .price {
+            @extend %text_size15;
+            color: $secondaryAccentColor;
+            font-weight: 500;
+          }
+        }
+      }
+    }
+    .btn-wrapper {
+      text-align: center;
+      .btn-contra {
+        background: transparent;
+        border: 1px $accentColor solid;
+        color: $accentColor;
+        margin-bottom: 130px;
+      }
+      .btn-contra:hover {
+        background: $accentColor;
+        border: 1px transparent solid;
+        color: $alternateColor;
+      }
+    }
+    .importance {
+      @include container_box(1110px, 100%, 0, 0 auto);
+      margin-bottom: 130px;
+
+      .points3 {
+        @include container_box(1110px, 100%, 0, 0 auto);
+        @include grid_box(grid, repeat(3, 1fr), 1fr, start);
+        padding-top: 92px;
+        @media (max-width: 915px) {
+          column-gap: 30px;
+        }
+        @media (max-width: 1100px) {
+          @include grid_box(grid, 1fr, repeat(3, 1fr), сутеук);
+          justify-items: center;
+          row-gap: 20px;
+        }
+        .quality {
+          @include container_box(350px, 100%, 0, 0);
+          @media (max-width: 385px) {
+            justify-self: center;
+          }
+          .pictures_3points {
+            @include container_box(61px, 100%, 0, 0);
+            margin-bottom: 37px;
+          }
+          .top_text {
+            @extend %text_size20;
+            font-size: 25px;
+            margin-bottom: 24px;
+          }
+          .bottom_text {
+            @extend %text_size17;
+            font-weight: 500;
+            @include container_box(300px, 100%, 0, 0);
+          }
+        }
+        .speed {
+          @include container_box(350px, 100%, 0, 0);
+          .pictures_3points {
+            @include container_box(61px, 100%, 0, 0);
+            margin-bottom: 37px;
+          }
+          .top_text {
+            @extend %text_size20;
+            font-size: 25px;
+            margin-bottom: 24px;
+          }
+          .bottom_text {
+            @extend %text_size17;
+            font-weight: 500;
+            @include container_box(300px, 100%, 0, 0);
+          }
+        }
+        .responsibility {
+          @include container_box(350px, 100%, 0, 0);
+          @media (max-width: 385px) {
+            justify-self: center;
+          }
+          .pictures_3points {
+            @include container_box(61px, 100%, 0, 0);
+            margin-bottom: 37px;
+          }
+          .top_text {
+            @extend %text_size20;
+            font-size: 25px;
+            margin-bottom: 24px;
+          }
+          .bottom_text {
+            @extend %text_size17;
+            font-weight: 500;
+            @include container_box(300px, 100%, 0, 0);
+          }
+        }
+      }
+    }
+  }
+
+  .dream_team {
+    @extend %text_size20;
+    font-size: 40px;
+    margin-bottom: 92px;
+    @media (max-width: 925px) {
+      text-align: center;
+      font-size: 35px;
+      line-height: 45px;
+    }
+  }
+  .team_box {
+    @include grid_box(
+      grid,
+      minmax(500px, 729px) minmax(200px, 379px),
+      1fr,
+      space-between
+    );
+    align-items: center;
+    margin-bottom: 130px;
+    padding-top: 92px;
+    @media (max-width: 925px) {
+      @include grid_box(grid, 1fr, 2fr, space-evenly);
+      justify-items: center;
+      row-gap: 50px;
+    }
+    .team_pictures {
+      background-image: url("../images/home/team.png");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      @include container_box(729px, 100%, 0, 0);
+      min-height: 487px;
+      @include grid_box(grid, 1fr, 1fr, 0);
+      justify-items: center;
+      align-items: end;
+      .dotted_pages {
+        @include container_box(114px, 100%, 0 0 62px 0, 0);
+        @include grid_box(grid, repeat(3, 30px), 1fr, space-between);
+        bottom: 48px;
+        .pages_grey {
+          width: 30px;
+          height: 4px;
+          background: #ffffff5c;
+        }
+        .pages_black {
+          width: 30px;
+          height: 4px;
+          background: $alternateColor;
+        }
+      }
+    }
+    .text_team {
+      @include grid_box(grid, 124px minmax(150px, 255px), 1fr, 0);
+      .wrapper_text {
+        @include container_box(255px, 100%, 0, 0);
+        justify-self: end;
+        align-self: center;
+        .text_team_top {
+          @extend %text_size20;
+          font-size: 25px;
+          margin-bottom: 28px;
+        }
+        .text_team_middle {
+          @extend %text_size17;
+          font-weight: 500;
+          margin-bottom: 28px;
+        }
+        a {
+          text-decoration: none;
+          color: $accentColor;
+          @extend %text_size17;
+        }
+      }
+    }
+  }
+}

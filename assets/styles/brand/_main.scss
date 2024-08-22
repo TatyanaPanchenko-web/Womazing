@@ -1,0 +1,32 @@
+.brand {
+  padding-top: 110px;
+  margin-bottom: 130px;
+  @media (max-width: 920px) {
+    padding-top: 50px;
+    margin-bottom: 80px;
+  }
+}
+.brand-article {
+  display: flex;
+  gap: 94px;
+  margin-bottom: 130px;
+  .image {
+    flex-basis: 442px;
+    img {
+      width: 100%;
+    }
+  }
+  .brand-wrapper {
+    flex-basis: 542px;
+    align-self: center;
+    .brand-caption {
+      margin-bottom: 46px;
+    }
+  }
+}
+.article-img-right {
+  flex-direction: row-reverse;
+}
+.button-wrapper {
+  text-align: center;
+}

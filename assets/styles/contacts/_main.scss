@@ -1,0 +1,69 @@
+.main-contacts {
+  padding-top: 110px;
+  .contacts-map {
+    margin-bottom: 130px;
+    iframe {
+      width: 100%;
+    }
+  }
+  .contacts-info {
+    display: flex;
+    justify-content: start;
+    font-size: 20px;
+    margin-bottom: 130px;
+    a {
+      text-decoration: none;
+      color: $mainColor;
+    }
+    .contacts-phone {
+      margin-right: 111px;
+    }
+    .contacts-title {
+      font-size: 17px;
+      margin-bottom: 19px;
+    }
+    .contacts-email {
+      margin-right: 98px;
+    }
+  }
+
+  .contacts-form {
+    .form-caption {
+      margin-bottom: 62px;
+    }
+    .form {
+      display: flex;
+      flex-direction: column;
+      width: 443px;
+      .form-input,
+      .form-message {
+        border: none;
+        outline: none;
+        border-bottom: 1px solid $mainColor;
+        padding-bottom: 16px;
+        margin-bottom: 35px;
+        font-size: 16px;
+        &::placeholder {
+          font-family: $font;
+          font-size: 16px;
+          padding-bottom: 16px;
+          color: $placeholderColor;
+        }
+      }
+      .form-message {
+        height: 134px;
+        width: 443px;
+      }
+      button {
+        width: 188px;
+        margin-bottom: 84px;
+      }
+    }
+  }
+  .form-info {
+    background-color: $backgroundColor;
+    padding: 30px 76px;
+    display: inline-block;
+    margin-bottom: 130px;
+  }
+}
